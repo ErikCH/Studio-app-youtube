@@ -1,0 +1,23 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-studiographql-staging-182639-authRole",
+      "UnauthRoleArn": "arn:aws:iam::127847013811:role/amplify-studiographql-staging-182639-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::127847013811:role/amplify-studiographql-staging-182639-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-studiographql-staging-182639-deployment",
+      "UnauthRoleName": "amplify-studiographql-staging-182639-unauthRole",
+      "StackName": "amplify-studiographql-staging-182639",
+      "StackId": "arn:aws:cloudformation:us-east-2:127847013811:stack/amplify-studiographql-staging-182639/14eb29e0-5263-11ee-aa8a-025e0a44cdbf",
+      "AmplifyAppId": "d2hjfbjpu8dz17"
+    },
+    "categories": {
+      "auth": {
+        "studiographql": {}
+      },
+      "storage": {
+        "s3studiographqlstoraged36e73fa": {}
+      }
+    }
+  }
+}

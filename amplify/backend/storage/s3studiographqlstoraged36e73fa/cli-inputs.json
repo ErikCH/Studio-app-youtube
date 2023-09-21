@@ -1,0 +1,14 @@
+{
+  "resourceName": "s3studiographqlstoraged36e73fa",
+  "bucketName": "studio-graphql-storage-d36e73fa",
+  "policyUUID": "71d5acb2",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ]
+}

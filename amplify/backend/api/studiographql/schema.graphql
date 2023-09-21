@@ -1,0 +1,26 @@
+type Platform @model @auth(rules: [{allow: public, operations: [read]}, {allow: private, operations: [create, read]}, {allow: groups, groups: ["admin"], operations: [read, create, update, delete]}]) {
+  id: ID!
+  name: String
+  value: String
+  Products: [Product] @hasMany(indexName: "byPlatform", fields: ["id"])
+}
+
+type Genre @model @auth(rules: [{allow: public, operations: [read]}, {allow: private, operations: [create, read]}, {allow: groups, groups: ["admin"], operations: [read, create, update, delete]}]) {
+  id: ID!
+  name: String
+  value: String
+  Products: [Product] @hasMany(indexName: "byGenre", fields: ["id"])
+}
+
+type Product @model @auth(rules: [{allow: public, operations: [read]}, {allow: private, operations: [create, read]}, {allow: groups, groups: ["admin"], operations: [read, create, update, delete]}]) {
+  id: ID!
+  name: String
+  isSold: Boolean
+  price: Float
+  image: String
+  platformID: ID! @index(name: "byPlatform")
+  genreID: ID! @index(name: "byGenre")
+  Platform: Platform @belongsTo(fields: ["platformID"])
+  Genre: Genre @belongsTo(fields: ["genreID"])
+}
+ 
